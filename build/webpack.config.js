@@ -4,6 +4,7 @@
  *  File : webpack.config.js.js
  *******************************************/
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const isDev = process.env.NODE_ENV === 'development'
@@ -27,7 +28,10 @@ const config = {
 					loader: "css-loader" // translates CSS into CommonJS
 				}, {
 					loader: "sass-loader" // compiles Sass to CSS
-				}]
+				}],
+				exclude: [
+					path.join(__dirname, '../node_modules')
+				]
 			},
 			{
 				test: /\.(js)$/,
@@ -39,9 +43,10 @@ const config = {
 		]
 	},
 	output: {
-		path: path.join(__dirname + '/../dist'),
+		path: path.join(__dirname, '../dist'),
 		filename: '[name].[hash].js',
-		publicPath: '/public/'
+		// chunkFilename: "[chunkhash].js",
+		publicPath: ''
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -59,9 +64,9 @@ if (isDev) {
 		overlay: {
 			errors: true
 		},
-		publicPath: '/public/',
+		publicPath: '',
 		historyApiFallback: {
-			index: '/public/index.html'
+			index: 'index.html'
 		}
 	}
 }
