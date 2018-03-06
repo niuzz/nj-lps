@@ -50,7 +50,7 @@ const config = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			filename: 'index.html',
+			filename: 'index.shtml',
 			template: path.join(__dirname, '../src/tmp.html')
 		})
 	]
