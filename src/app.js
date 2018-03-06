@@ -4,9 +4,6 @@
  *  File : index.js
  *******************************************/
 import 'bootstrap/dist/css/bootstrap.min.css'
-import jquery from 'jquery'
+import $ from 'jquery'
 import bootstrap from 'bootstrap'
-
-window.onload = () => {
-	alert(111)
-}
+import "./scss/app.scss"

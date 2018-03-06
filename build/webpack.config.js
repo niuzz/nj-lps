@@ -6,7 +6,9 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {
+const isDev = process.env.NODE_ENV === 'development'
+
+const config = {
 	mode: 'production',
 	entry: {
 		app: path.join(__dirname + '/../src/app.js')
@@ -18,23 +20,13 @@ module.exports = {
 				use: ['style-loader', 'css-loader']
 			},
 			{
-				test: /\.(scss)$/,
+				test: /\.sass$/,
 				use: [{
-					loader: 'style-loader', // inject CSS to page
+					loader: "style-loader" // creates style nodes from JS strings
 				}, {
-					loader: 'css-loader', // translates CSS into CommonJS modules
+					loader: "css-loader" // translates CSS into CommonJS
 				}, {
-					loader: 'postcss-loader', // Run post css actions
-					options: {
-						plugins: function () { // post css plugins, can be exported to postcss.config.js
-							return [
-								require('precss'),
-								require('autoprefixer')
-							];
-						}
-					}
-				}, {
-					loader: 'sass-loader' // compiles Sass to CSS
+					loader: "sass-loader" // compiles Sass to CSS
 				}]
 			},
 			{
@@ -48,11 +40,29 @@ module.exports = {
 	},
 	output: {
 		path: path.join(__dirname + '/../dist'),
-		filename: '[name].[hash].js'
+		filename: '[name].[hash].js',
+		publicPath: '/public/'
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
+			filename: 'index.html',
 			template: path.join(__dirname, '../src/tmp.html')
 		})
 	]
 }
+if (isDev) {
+	config.devServer = {
+		host: '0.0.0.0',
+		port: '9000',
+		contentBase: path.join(__dirname + '/../dist'),
+		// hot: true,
+		overlay: {
+			errors: true
+		},
+		publicPath: '/public/',
+		historyApiFallback: {
+			index: '/public/index.html'
+		}
+	}
+}
+module.exports = config
