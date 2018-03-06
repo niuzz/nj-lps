@@ -1,0 +1,23 @@
+{
+  "name": "nj-lps",
+  "version": "1.0.0",
+  "description": "landing page scaffold for cb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/niuzz/nj-lps.git"
+  },
+  "keywords": [
+    "landing",
+    "page"
+  ],
+  "author": "niuzz@hotmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niuzz/nj-lps/issues"
+  },
+  "homepage": "https://github.com/niuzz/nj-lps#readme"
+}
