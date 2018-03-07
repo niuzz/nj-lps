@@ -12,7 +12,7 @@ const isDev = process.env.NODE_ENV === 'development'
 const config = {
 	mode: 'production',
 	entry: {
-		app: path.join(__dirname + '/../src/app.js')
+		app: path.join(__dirname, '../src/app.js')
 	},
 	module: {
 		rules: [
@@ -59,7 +59,7 @@ if (isDev) {
 	config.devServer = {
 		host: '0.0.0.0',
 		port: '9000',
-		contentBase: path.join(__dirname + '/../dist'),
+		contentBase: path.join(__dirname, '../dist'),
 		// hot: true,
 		overlay: {
 			errors: true
