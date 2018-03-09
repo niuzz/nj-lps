@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="niuzz niuzz@hotmail.com">
-    <title>china-byte landing page aaa</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 
 <body>
@@ -19,7 +19,10 @@
     <div class="alert alert-primary" role="alert">
         This is a primary alert—check it out! 你好!
     </div>
-    <div class='bt'>aaa</div>
+    <div class='bt'>111</div>
+    <img src="./public/img/undefind.png" alt="">
+    <!-- 没有引入html-load用require引入图片 -->
+    <!-- <%= require(url-loader?limit=1024&outputPath=public/img!./public/img/undefind.png)%> -->
 </div>
 </body>
 
