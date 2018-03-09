@@ -10,9 +10,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const isDev = process.env.NODE_ENV === 'development'
 
 const config = {
-	mode: 'production',
 	entry: {
-		app: path.join(__dirname + '/../src/app.js')
+		app: path.join(__dirname + '/../src/app.js'),
 	},
 	module: {
 		rules: [
@@ -34,24 +33,38 @@ const config = {
 				]
 			},
 			{
+				test: /\.(png|jpg|jpeg)$/,
+				loader: 'url-loader',
+				options: {
+							name: '[name].[md5:hash:base64:6].[ext]',
+							outputPath: 'public/img',
+							limit: 1024
+					}
+			},
+			{
+				test: /\.html$/,
+				loader: 'html-loader'
+			  },
+			{
 				test: /\.(js)$/,
 				loader: 'babel-loader',
 				exclude: [
-					path.join(__dirname, '../node_modules')
+					path.join(__dirname, '../node_modules'),
 				]
-			}
+			} 
 		]
 	},
 	output: {
 		path: path.join(__dirname, '../dist'),
 		filename: '[name].[hash].js',
-		// chunkFilename: "[chunkhash].js",
-		publicPath: ''
+		publicPath: ''     					
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
+			title: '111',
 			filename: 'index.shtml',
-			template: path.join(__dirname, '../src/tmp.html')
+			hash: true,
+			template: path.join(__dirname, '../src/templete.html'),
 		})
 	]
 }
@@ -60,7 +73,6 @@ if (isDev) {
 		host: '0.0.0.0',
 		port: '9000',
 		contentBase: path.join(__dirname + '/../dist'),
-		// hot: true,
 		overlay: {
 			errors: true
 		},
