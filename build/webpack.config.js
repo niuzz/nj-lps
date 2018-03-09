@@ -14,6 +14,12 @@ const config = {
 	entry: {
 		app: path.join(__dirname, '../src/app.js')
 	},
+	output: {
+		path: path.join(__dirname, '../dist'),
+		filename: '[name].[hash].js',
+		// chunkFilename: "[chunkhash].js",
+		publicPath: '/public'
+	},
 	module: {
 		rules: [
 			{
@@ -42,12 +48,6 @@ const config = {
 			}
 		]
 	},
-	output: {
-		path: path.join(__dirname, '../dist'),
-		filename: '[name].[hash].js',
-		// chunkFilename: "[chunkhash].js",
-		publicPath: ''
-	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: 'index.shtml',
@@ -60,13 +60,14 @@ if (isDev) {
 		host: '0.0.0.0',
 		port: '9000',
 		contentBase: path.join(__dirname, '../dist'),
+		open: 'true',
 		// hot: true,
 		overlay: {
 			errors: true
 		},
-		publicPath: '',
+		publicPath: '/public',
 		historyApiFallback: {
-			index: 'index.html'
+			index: '/public/index.html'
 		}
 	}
 }
