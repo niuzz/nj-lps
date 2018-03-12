@@ -5,6 +5,9 @@
 <template>
 	<div class="wrap">
 		{{ message }}
+		<button class='btn btn-primary'>
+			bootstrap btn
+		</button>
 	</div>
 </template>
 
@@ -15,5 +18,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+	.wrap {
+		background: #000000;
+		color: #fff;
+	}
 </style>
