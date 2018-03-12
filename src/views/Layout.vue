@@ -13,7 +13,15 @@
 
 <script type="text/ecmascript-6">
 export default {
-	data: () => ({message: 'Layout VUE is here!!!!'})
+	data: () => ({message: 'Layout VUE is here!!!!'}),
+	created: function() {
+		this.$(function() {
+			console.log('-----------------------')
+			console.log(1111)
+			console.log('-----------------------')
+			
+		})
+	}
 }
 </script>
 

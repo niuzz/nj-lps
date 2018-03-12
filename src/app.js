@@ -10,6 +10,8 @@ import "./scss/app.scss"
 import Vue from 'vue'
 import Layout from 'pages/Layout.vue'
 
+Vue.prototype.$ = $
+
 var app = new Vue({
 	el: '#app',
 	data: {
