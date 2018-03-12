@@ -95,7 +95,7 @@ if (isDev) {
 		overlay: {
 			errors: true
 		},
-		publicPath: '/public',
+		publicPath: '/public/',
 		historyApiFallback: {
 			index: '/public/index.html'
 		}

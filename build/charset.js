@@ -11,7 +11,6 @@ var iconv = require('iconv-lite')
 
 let htmlStr = fs.readFileSync(path.join(__dirname, '../dist/index.html'))
 var encoded = iconv.encode(htmlStr, 'gbk')
-
 fs.writeFile(path.join(__dirname, '../dist/index.shtml'), encoded, function () {
 	var buf = fs.readFileSync(path.join(__dirname, '../dist/index.html'))
 })
@@ -37,7 +36,6 @@ function explorer(jspath) {
 					console.log('-----------------------')
 					console.log('跳过文件夹')
 					console.log('-----------------------')
-					
 				} else {
 					// 读出所有的文件		
 					let flag = new RegExp('.js').test(file)
@@ -47,6 +45,9 @@ function explorer(jspath) {
 						fs.writeFile(path.join(__dirname, '../dist/' + file), encoded, function () {
 							var buf = fs.readFileSync(path.join(__dirname, '../dist/' + file))
 						})
+						console.log('-----------------------')
+						console.log('转码完成, webstorm自带服务器默认打开不支持GBK, 请在文件目录手动打开')
+						console.log('-----------------------')
 					}
 				}
 			})
