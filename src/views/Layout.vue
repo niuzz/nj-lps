@@ -8,6 +8,7 @@
 		<button class='btn btn-primary'>
 			bootstrap btn
 		</button>
+		<img src="../public/img/undefind.png" alt="xxxx">
 	</div>
 </template>
 
@@ -18,8 +19,7 @@ export default {
 		this.$(function() {
 			console.log('-----------------------')
 			console.log(1111)
-			console.log('-----------------------')
-			
+			console.log('-----------------------')	
 		})
 	}
 }
