@@ -16,21 +16,28 @@ const config = {
 	module: {
 		rules: [
 			{
-				test: /.(css)$/,
+				test: /\.css$/,
 				use: ['style-loader', 'css-loader']
 			},
 			{
-				test: /\.sass$/,
+				test: /\.(scss)$/,
 				use: [{
-					loader: "style-loader" // creates style nodes from JS strings
+					loader: 'style-loader', // inject CSS to page
 				}, {
-					loader: "css-loader" // translates CSS into CommonJS
+					loader: 'css-loader', // translates CSS into CommonJS modules
 				}, {
-					loader: "sass-loader" // compiles Sass to CSS
-				}],
-				exclude: [
-					path.join(__dirname, '../node_modules')
-				]
+					loader: 'postcss-loader', // Run post css actions
+					options: {
+						plugins: function () { // post css plugins, can be exported to postcss.config.js
+							return [
+								require('precss'),
+								require('autoprefixer')
+							];
+						}
+					}
+				}, {
+					loader: 'sass-loader' // compiles Sass to CSS
+				}]
 			},
 			{
 				test: /\.(png|jpg|jpeg)$/,
