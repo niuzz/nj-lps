@@ -6,7 +6,7 @@
 	<div class="wrap">
 		{{ message }}
 		<button class='btn btn-primary'>
-			bootstrap btn
+			bootstrap btn 我也是汉字
 		</button>
 		<img src="../public/img/undefind.png" alt="xxxx">
 	</div>
