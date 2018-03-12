@@ -11,7 +11,18 @@ const isDev = process.env.NODE_ENV === 'development'
 
 const config = {
 	entry: {
-		app: path.join(__dirname + '/../src/app.js'),
+		app: path.join(__dirname, '../src/app.js'),
+	},
+	output: {
+		path: path.join(__dirname, '../dist'),
+		filename: '[name].[hash].js',
+		publicPath: ''
+	},
+	resolve: {
+		alias: {
+			'vue': 'vue/dist/vue.js',
+			'pages': path.join(__dirname, '../src/views/'),
+		}
 	},
 	module: {
 		rules: [
@@ -40,6 +51,10 @@ const config = {
 				}]
 			},
 			{
+				test: /.vue$/,
+				loader: 'vue-loader'
+			},
+			{
 				test: /\.(png|jpg|jpeg)$/,
 				loader: 'url-loader',
 				options: {
@@ -61,17 +76,14 @@ const config = {
 			} 
 		]
 	},
-	output: {
-		path: path.join(__dirname, '../dist'),
-		filename: '[name].[hash].js',
-		publicPath: ''     					
-	},
+	
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: '111',
-			filename: 'index.shtml',
+			title: 'cb landing page',
+			filename: 'index.html',
 			hash: true,
 			template: path.join(__dirname, '../src/templete.html'),
+			inject: 'body'
 		})
 	]
 }
@@ -79,7 +91,7 @@ if (isDev) {
 	config.devServer = {
 		host: '0.0.0.0',
 		port: '9000',
-		contentBase: path.join(__dirname + '/../dist'),
+		contentBase: path.join(__dirname, '../dist'),
 		overlay: {
 			errors: true
 		},
