@@ -3,18 +3,24 @@
 *  Created On : Mon Mar 12 2018
 ******************************************* -->
 <template>
-	<div class="wrap">
-		{{ message }}
-		<button class='btn btn-primary'>
-			bootstrap btn 我也是汉字
-		</button>
-		<img src="../public/img/undefind.png" alt="xxxx">
+	<div>
+		<First></First>
+		<Third></Third>
+		<Second></Second>
 	</div>
 </template>
 
 <script type="text/ecmascript-6">
+import First from 'components/First.vue'
+import Second from 'components/Second.vue'
+import Third from 'components/Third.vue'
 export default {
 	data: () => ({message: 'Layout VUE is here!!!!'}),
+	components: {
+	First,
+	Third,
+	Second
+    },
 	created: function() {
 		this.$(function() {
 			console.log('-----------------------')
@@ -26,8 +32,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.wrap {
-		background: #000000;
-		color: #fff;
-	}
+
 </style>
