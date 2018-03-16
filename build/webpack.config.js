@@ -15,8 +15,8 @@ const config = {
   },
   output: {
     path: path.join(__dirname, '../dist'),
-    filename: '[name].[hash].js'
-    // publicPath: '/public/'
+    filename: '[name].[hash].js',
+    publicPath: '/public/'
   },
   resolve: {
     alias: {
