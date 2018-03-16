@@ -26,12 +26,12 @@
  
   
 </template>
-<script>
+<script scoped>
 export default {
   
 }
 </script>
-<style>
+<style scoped>
 .thr2{
     width: 48%;
     height: 205px;

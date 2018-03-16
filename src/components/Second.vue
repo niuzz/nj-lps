@@ -4,15 +4,17 @@
           <div v-for="first in firsts" :key="first.id"></div>
       </div>
       <div class="sec">
-          <div v-for="two in twos" :key="two.id">
+          <div  ref="www" v-for="two in twos" :key="two.id" :style="aaa" class="a">
       </div>
       </div>
   </div>
 </template>
-<script>
+<script scoped>
+
 export default {
     data (){
         return{
+            aaa: '',
             firsts :[
                 {},
                 {}
@@ -21,14 +23,26 @@ export default {
                 {},
                 {},
                 {}
-
-            ]
+            ],
         }
-    }
+    },
+            mounted() {
+            //     this.a()
+            //  console.log(1)
+            //  let hight = this.$refs.www[0].scrollWidth * 1.16
+            //  this.aaa = 'height:' + hight + 'px'
+            //  console.log(hight)
+            },
+              methods:{ 
+                a() {
+
+                  }
+            
+            }
   
 }
 </script>
-<style>
+<style scoped>
 .fir{
     width: 53%;
     height: 670px;
