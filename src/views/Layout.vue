@@ -36,17 +36,13 @@
 			<div class="row">
                  <div class='col-12 col-lg-5 li'><Second></Second></div>
                  <div class="col-12 col-lg-6 li"><Third></Third></div>
-             </div>
+            </div>
      </div>
-	 
+	
 	 <div style="width:100%;background:#333e49;padding-top:20px;padding-bottom:50px">
 	 <div class="container" >
 		 <Titles t1="媒体观点" style="margin:20px auto"></Titles>
-		 <div class="row">
-
-
-			
-			 
+		 <div class="row"> 
 		 <Author></Author>
 		 <NewList></NewList>
 		 </div>
@@ -55,6 +51,10 @@
 		<div>
 			<Foot></Foot>
 		</div>
+		<div class="container">
+			<swiper-page></swiper-page>	
+		</div>
+		
 	</div>
 </template>
 
@@ -71,6 +71,7 @@ import First from 'components/First.vue'
 import Second from 'components/Second.vue'
 import Third from 'components/Third.vue'
 import Four from 'components/Four.vue'
+import SwiperPage from 'components/SwiperPage.vue'
 import Titles from 'components/Titles.vue'
 
 export default {
@@ -88,15 +89,13 @@ export default {
 	Crasouel,
 	Foot,
 	Author,
-	NewList
-
+	NewList,
+	SwiperPage
     },
-	created: function() {
-		this.$(function() {
-			console.log('-----------------------')
-			console.log(1111)
-			console.log('-----------------------')	
-		})
+	mounted(){
+
+
+
 	}
 }
 </script>

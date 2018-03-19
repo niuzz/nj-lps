@@ -36,7 +36,7 @@ export default {
         border: 1px solid #000;
     }
     .m6_l_m {
-        width: 32%;
+        width: 42%;
     }
     .cic {
         width: 155px;
@@ -72,12 +72,10 @@ export default {
         float: left;
     }
     .ml135{
-        margin-left: 32%;
+        margin-left: 15%;
     }
     @media screen and (max-width:414px) {
-   /* .ml135{
-        margin-left: 54%;
-    } */
+   
     .m6_l_m{
         margin: 0 auto;
          width: 54%;

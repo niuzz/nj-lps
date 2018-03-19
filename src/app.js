@@ -9,6 +9,9 @@ import bootstrap from 'bootstrap'
 import './scss/app.scss'
 import Vue from 'vue'
 import Layout from 'pages/Layout.vue'
+import 'swiper/dist/css/swiper.min.css'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper)
 
 Vue.prototype.$ = $
 

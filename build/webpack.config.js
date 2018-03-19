@@ -92,7 +92,7 @@ const config = {
 }
 if (isDev) {
   config.devServer = {
-    host: '0.0.0.0',
+    host: '192.168.0.146',
     port: '9001',
     contentBase: path.join(__dirname, '../dist'),
     overlay: {
