@@ -1,17 +1,17 @@
 <template>
-<div>
+
     <div class="title">
         {{t1}}
     </div>
 
-</div>
+
   
 </template>
 <script>
 export default {
     props:['t1'],
     data:()=>({
-    })
+    })  
   
 }
 </script>

@@ -56,7 +56,7 @@ export default {
     height: 670px;
     border: 1px solid red;
     box-sizing: border-box;
-    float: left;
+    float: right;
 }
 
 .fir div{
@@ -81,6 +81,8 @@ export default {
 {
     margin-top: 20px;
 }
+
+
 </style>
 
 

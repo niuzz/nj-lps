@@ -9,9 +9,6 @@ import bootstrap from 'bootstrap'
 import './scss/app.scss'
 import Vue from 'vue'
 import Layout from 'pages/Layout.vue'
-import First from 'components/First.vue'
-// import Second from 'components/Second.vue'
-import Third from 'components/Third.vue'
 
 Vue.prototype.$ = $
 
