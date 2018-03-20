@@ -34,12 +34,27 @@
 	 </div>
 	 		<div class="container">
 			<div class="row">
-                 <div class='col-12 col-lg-6 li'><Second></Second></div>
+                 <div class='col-12 col-lg-5 li'><Second></Second></div>
                  <div class="col-12 col-lg-6 li"><Third></Third></div>
-             </div>
+            </div>
      </div>
+	
+	 <div style="width:100%;background:#333e49;padding-top:20px;padding-bottom:50px">
+	 <div class="container" >
+		 <Titles t1="媒体观点" style="margin:20px auto"></Titles>
+		 <div class="row"> 
+		 <Author></Author>
+		 <NewList></NewList>
+		 </div>
+	 </div>
+	 </div>
+		<div>
+			<Foot></Foot>
+		</div>
+		<div class="container">
+			<swiper-page></swiper-page>	
+		</div>
 		
-
 	</div>
 </template>
 
@@ -48,13 +63,17 @@ import Banner from'components/Banner.vue'
 import Navbar from'components/Navbar.vue'
 import Describe from'components/Describe.vue'
 import Toutiao from'components/Toutiao.vue'
-// import Crasouel from'components/Crasouel.vue'
+import Foot from 'components/Foot.vue'
+import NewList from 'components/NewList.vue'
+import Author from 'components/Author.vue'
 import Crasouel from 'components/Crasouel.vue'
 import First from 'components/First.vue'
 import Second from 'components/Second.vue'
 import Third from 'components/Third.vue'
 import Four from 'components/Four.vue'
+import SwiperPage from 'components/SwiperPage.vue'
 import Titles from 'components/Titles.vue'
+
 export default {
 	components: {
 	Banner,
@@ -67,14 +86,16 @@ export default {
 	Four,
 	Titles,
 	Toutiao,
-	Crasouel
+	Crasouel,
+	Foot,
+	Author,
+	NewList,
+	SwiperPage
     },
-	created: function() {
-		this.$(function() {
-			console.log('-----------------------')
-			console.log(1111)
-			console.log('-----------------------')	
-		})
+	mounted(){
+
+
+
 	}
 }
 </script>
