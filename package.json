@@ -1,16 +1,9 @@
 {
   "name": "nj-lps",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "landing page scaffold for cb",
   "main": "src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clear": "rimraf dist",
-    "build:landingpage": "webpack --progress --color --config build/webpack.config.js",
-    "build": "npm run clear && npm run build:landingpage",
-    "charset": "node build/charset.js",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.config.js"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/niuzz/nj-lps.git"
@@ -25,35 +18,6 @@
     "url": "https://github.com/niuzz/nj-lps/issues"
   },
   "homepage": "https://github.com/niuzz/nj-lps#readme",
-  "devDependencies": {
-    "autoprefixer": "^8.1.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.3",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-es2015-loose": "^8.0.0",
-    "cross-env": "^5.1.3",
-    "css-loader": "^0.28.10",
-    "file-loader": "^1.1.11",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.0.6",
-    "iconv-lite": "^0.4.19",
-    "node-sass": "^4.7.2",
-    "postcss-loader": "^2.1.1",
-    "precss": "^3.1.2",
-    "sass-loader": "^6.0.7",
-    "style-loader": "^0.20.2",
-    "url-loader": "^1.0.1",
-    "vue-awesome-swiper": "^3.1.3",
-    "vue-loader": "^14.2.1",
-    "vue-template-compiler": "^2.5.15",
-    "webpack": "^3.6.0",
-    "webpack-dev-server": "2.9.0"
-  },
-  "dependencies": {
-    "bootstrap": "^4.0.0",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.12.9",
-    "swiper": "^4.0.5",
-    "vue": "^2.5.15"
-  }
+  "devDependencies": {},
+  "dependencies": {}
 }
