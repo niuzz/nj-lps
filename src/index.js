@@ -4,7 +4,7 @@ let sp = {
 }
 
 const fun = () => {
-	console.log(sp.name)
+	console.log('中文')
 }
 
 window.onload = function () {

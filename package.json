@@ -6,7 +6,8 @@
   "scripts": {
     "build": "rimraf dist && webpack --mode production",
     "serve": "serve dist --open",
-    "start": "webpack-dev-server --mode development"
+    "start": "webpack-dev-server --mode development",
+    "charset": "node build/charset.js"
   },
   "repository": {
     "type": "git",

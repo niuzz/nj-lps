@@ -10,6 +10,7 @@ var iconv = require('iconv-lite')
 
 
 let htmlStr = fs.readFileSync(path.join(__dirname, '../dist/index.html'))
+htmlStr = iconv.decode(htmlStr, 'utf-8')
 var encoded = iconv.encode(htmlStr, 'gbk')
 fs.writeFile(path.join(__dirname, '../dist/index.shtml'), encoded, function () {
 	var buf = fs.readFileSync(path.join(__dirname, '../dist/index.html'))
@@ -41,6 +42,7 @@ function explorer(jspath) {
 					let flag = new RegExp('.js').test(file)
 					if (flag) {
 						let htmlStr = fs.readFileSync(path.join(__dirname, '../dist/' + file))
+						htmlStr = iconv.decode(htmlStr, 'utf-8');
 						var encoded = iconv.encode(htmlStr, 'gbk')
 						fs.writeFile(path.join(__dirname, '../dist/' + file), encoded, function () {
 							var buf = fs.readFileSync(path.join(__dirname, '../dist/' + file))

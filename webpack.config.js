@@ -52,7 +52,7 @@ module.exports = {
 					{
 						loader: 'file-loader',
 						options: {
-							name: '/public/img/[name].[ext]'
+							name: 'public/img/[name].[ext]'
 						},
 					},
 				],
@@ -77,7 +77,7 @@ module.exports = {
 		// 生成html
 		new HtmlWebpackPlugin({
 			filename: 'index.html', 
-			template: path.resolve(__dirname+"/public/", 'index.html'), 
+			template: path.join(__dirname, '/public/index.html'), 
 		}),
 		// 单独打包css
 		new ExtractTextPlugin("index[hash].css"),
