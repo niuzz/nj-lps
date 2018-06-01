@@ -88,10 +88,16 @@ const config = {
 	]
 }
 if (isDev) {
+	config.entry = {
+		hot: 'webpack/hot/dev-server',
+		app: path.join(__dirname, '../src/app.js')
+	}
 	config.devServer = {
 		host: '0.0.0.0',
 		port: '9000',
+		inline: true,
 		contentBase: path.join(__dirname, '../dist'),
+		progress: true, 
 		overlay: {
 			errors: true
 		},

@@ -6,7 +6,7 @@
 	<div class="wrap">
 		{{ message }}
 		<button class='btn btn-primary'>
-			bootstrap btn 我也是汉字
+			bootstrap btn xaa
 		</button>
 		<img src="../public/img/undefind.png" alt="xxxx">
 	</div>
@@ -14,7 +14,7 @@
 
 <script type="text/ecmascript-6">
 export default {
-	data: () => ({message: 'Layout VUE is here!!!!'}),
+	data: () => ({message: 'Layout VUE is here'}),
 	created: function() {
 		this.$(function() {
 			console.log('-----------------------')

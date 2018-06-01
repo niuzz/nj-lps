@@ -1,8 +1,8 @@
 {
   "name": "nj-lps",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "landing page scaffold for cb",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "clear": "rimraf dist",
