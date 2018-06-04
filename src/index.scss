@@ -15,15 +15,71 @@ nav {
 		}
 	}
 }
+
+.slider {
+	width: 100%;
+	background: url('../public/img/bg_01.jpg') center top no-repeat;
+	background-size: cover;
+	font-size: 40px;
+	h1 {
+			max-width: 100%;
+			padding: 0.6em 5% 0 40%;
+			img {
+				display: block;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+	.time {
+		padding: 15% 0 10% 40%;
+		span {
+			font-size: 0.8rem;
+			display: inline-block;
+			color: #fff;
+			padding: 0.3em;
+			background: rgba($color: #000000, $alpha: 0.5);
+		}
+		a {
+			display: inline-block;
+			text-decoration: none;
+			color: #fff;
+			font-size: 0.8rem;
+			background: rgba($color: #a402b3, $alpha: 0.5);
+			border-top-right-radius: 5px;
+			border-bottom-right-radius: 5px;
+			padding: 0.3em 1em;
+		};
+	}
+}
+
+.icon {
+	display: block;
+	width: 3.125em;
+	height: 3.125em;
+	margin: 3.125em auto;
+}
+
 @media screen and (min-width: 450px) {
 	nav {
 		.container {
 			flex-direction: row;
 		}
 	}
-}
-
-img {
-	width: 100px;
-	height: 100px;
+	.slider {
+		height: 493px;
+		position: relative;
+		font-size: 22px;
+		h1{
+			padding-top: 3em;
+		}
+		.time {
+			position: absolute;
+			top: 70%;
+			left: 41%;
+			padding: 0;
+			span, a {
+				font-size: 1em;
+			}
+		}
+	}
 }
