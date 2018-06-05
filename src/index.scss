@@ -38,7 +38,7 @@ nav {
 			}
 		}
 	.time {
-		padding: 15% 0 10% 35%;
+		padding: 15% 0 20% 35%;
 		span {
 			font-size: 0.8rem;
 			display: inline-block;
@@ -69,11 +69,12 @@ nav {
 .vip {
 	display: flex;
 	flex-direction: row;
+	margin-bottom: 20px;
 	dt {
 		width: 30%;
 		display: flex;
 		align-items:center;
-  	justify-content:center;
+		justify-content:center;
 		img {
 			width: 100%;
 		}
@@ -90,6 +91,14 @@ nav {
 		p {
 			font-size: 12px;
 			text-align: justify;
+		}
+	}
+	&.vip2 {
+		dt {
+			img {
+				border: 5px solid rgba(130, 5, 168, 0.5);
+				border-radius: 50%;
+			}
 		}
 	}
 }
@@ -114,6 +123,18 @@ nav {
 			padding: 0;
 			span, a {
 				font-size: 1em;
+			}
+		}
+	}
+	.vip {
+		dd {
+			h4 {
+				font-size: 22px;
+				line-height: 31px;
+			}
+			p {
+				font-size: 16px;
+				line-height: 24px;
 			}
 		}
 	}
