@@ -41,5 +41,7 @@
     "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "resolve-url-loader": "^2.3.0"
+  }
 }

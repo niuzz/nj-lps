@@ -12,7 +12,7 @@ window.onload = function () {
 function calcWidth () {
 	let clientWidth = document.body.clientWidth
 	let navIcon = document.querySelector('.nav-list')
-	let container = document.querySelector('.container')
+	let container = document.querySelector('.nav-ul')
 
 	navIcon.addEventListener('click', function (e) {
 		let ul = e.target.parentElement.querySelector('ul')

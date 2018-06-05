@@ -42,12 +42,13 @@ module.exports = {
 							fallback: 'style-loader',
 							use: [
 								'css-loader',
+								'resolve-url-loader',
 								'sass-loader',
 							],
 						})			
 			},
 			{
-				test: /\.(png|jpg|gif)$/,
+				test: /\.(png|jpg|jpeg|gif)$/,
 				use: [
 					{
 						loader: 'file-loader',
@@ -56,6 +57,12 @@ module.exports = {
 						},
 					},
 				],
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|otf)$/,
+				use: [
+						'file-loader'
+					]
 			},
 			{
 				test: /\.html$/,

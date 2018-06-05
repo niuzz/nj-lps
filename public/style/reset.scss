@@ -1,2 +1,10 @@
+.fl { float: left; *display: inline; _display:inline; }
+.fr { float: right; *display: inline; _display:inline; }
+.clearfix:after { display: block; clear: both; content: ''; visibility: hidden; height: 0; }
+.clearfix { *zoom: 1; }
+
 @import './normalize';
+@import './grid';
 @import './cssresets';
+
+
