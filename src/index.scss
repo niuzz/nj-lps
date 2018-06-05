@@ -3,6 +3,11 @@
 nav {
 	width: 100%;
 	background: #eee;
+	.nav-list {
+		display: inline-block;
+		width: 20px;
+		height: 20px;
+	}
 	.container {
 		max-width: 1200px;
 		margin: 0 auto;
